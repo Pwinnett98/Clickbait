@@ -1,6 +1,5 @@
 package com.example.clickbait
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -13,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.Card
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -24,7 +24,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -71,35 +70,40 @@ fun AdItem (
 ad: Ad,
 modifier: Modifier = Modifier
 ) {
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(8.dp)
-    ) {
-        Image(
+    Card(modifier = modifier) {
+        Row(
             modifier = modifier
-                .size(64.dp)
+                .fillMaxWidth()
                 .padding(8.dp)
-                .clip(MaterialTheme.shapes.small),
-            contentScale = ContentScale.Crop,
-            painter = painterResource(ad.imageResourceId),
-            contentDescription = null
-        )
+        ) {
+            Image(
+                modifier = modifier
+                    .size(64.dp)
+                    .padding(8.dp)
+                    .clip(MaterialTheme.shapes.small),
+                contentScale = ContentScale.Crop,
+                painter = painterResource(ad.imageResourceId),
+                contentDescription = null
+            )
 
 
-        Column {
-            Text(
-                text = stringResource(ad.creator),
-                modifier = Modifier.padding(top = 8.dp)
-            )
-            Text(
-                text = stringResource(ad.title),
-                modifier = Modifier.padding(top = 8.dp)
-            )
-            Text(
-                text = stringResource(ad.time),
-                modifier = Modifier.padding(top = 8.dp)
-            )
+            Column {
+                Text(
+                    text = stringResource(ad.creator),
+                    style = MaterialTheme.typography.displayLarge,
+                    modifier = Modifier.padding(top = 8.dp)
+                )
+                Text(
+                    text = stringResource(ad.title),
+                    style = MaterialTheme.typography.displayMedium,
+                    modifier = Modifier.padding(top = 8.dp)
+                )
+                Text(
+                    text = stringResource(ad.time),
+                    style = MaterialTheme.typography.displaySmall,
+                    modifier = Modifier.padding(top = 8.dp)
+                )
+            }
         }
     }
 }
