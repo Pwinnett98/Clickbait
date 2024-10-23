@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Top Headlines</string>
+    <string name="ad_creator_1">BuzzFeed</string>
+    <string name="ad_creator_2">InfoFrenzyHub</string>
+    <string name="ad_creator_3">ViralInsightGlobe</string>
+    <string name="ad_creator_4">ViralInsightGlobe</string>
+    <string name="ad_creator_5">CuriositySphere</string>
+    <string name="ad_creator_6">InfoFrenzyHub</string>
+    <string name="ad_creator_7">TrendUnveilArena</string>
+    <string name="ad_creator_8">BuzzFeed</string>
+    <string name="ad_creator_9">CuriositySphere</string>
+    <string name="ad_creator_10">HuffPost</string>
+    <string name="ad_title_1">10 Unbelievable Travel Destinations You Never Knew Existed! You Won\'t
+Believe #10!</string>
+    <string name="ad_title_2">15 Adorable Pets Reacting to Their Reflections – You Won\'t Believe
+#7</string>
+    <string name="ad_title_3">Quiz: Which Fictional Fantasy World Should You Actually Live In?</string>
+    <string name="ad_title_4">The Ultimate DIY Hacks to Transform Your Small Space into a Palace!
+</string>
+    <string name="ad_title_5">Can You Guess These 90s Cartoon Theme Songs? Take the Nostalgia Quiz!</string>
+    <string name="ad_title_6">Discover Your Perfect Pizza Topping Based on Your Zodiac Sign! Virgo\'s
+Will Lose Their Minds!</string>
+    <string name="ad_title_7">Jaw-Dropping Celebrity Lookalikes That Will Make You Do a Double Take!</string>
+    <string name="ad_title_8">The Great Junk Food Showdown: Which Snack Will Win the Taste Test?</string>
+    <string name="ad_title_9">Find Out Your Celebrity Soulmate with This Totally Accurate Quiz!</string>
+    <string name="ad_title_10">Incredible Life Hacks That Will Change Your Daily Routine Forever!</string>
+    <string name="ad_time_1">22m ago</string>
+    <string name="ad_time_2">1h ago</string>
+    <string name="ad_time_3">16h ago</string>
+    <string name="ad_time_4">36m ago</string>
+    <string name="ad_time_5">2d ago</string>
+    <string name="ad_time_6">42m ago</string>
+    <string name="ad_time_7">12m ago</string>
+    <string name="ad_time_8">2h ago</string>
+    <string name="ad_time_9">4h ago</string>
+    <string name="ad_time_10">51m ago</string>
+</resources>
