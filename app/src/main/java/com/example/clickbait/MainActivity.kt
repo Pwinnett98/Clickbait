@@ -13,19 +13,20 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
-import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.clickbait.data.DataSource
@@ -52,18 +53,19 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ClickbaitTopAppBar(modifier: Modifier = Modifier) {
-    CenterAlignedTopAppBar(
+    TopAppBar(
         title = {
-            Row(verticalAlignment = Alignment.CenterVertically) {
+            Row {
                 Text(
                     text = stringResource(R.string.app_name),
-                    style = MaterialTheme.typography.displaySmall
+                    style = MaterialTheme.typography.displayLarge
                 )
             }
         },
         modifier = modifier
     )
 }
+
 
 @Composable
 fun AdItem (
@@ -80,8 +82,8 @@ modifier: Modifier = Modifier
                 modifier = modifier
                     .size(64.dp)
                     .padding(8.dp)
-                    .clip(MaterialTheme.shapes.small),
-                contentScale = ContentScale.Crop,
+                    .clip(MaterialTheme.shapes.medium),
+                contentScale = ContentScale.FillWidth,
                 painter = painterResource(ad.imageResourceId),
                 contentDescription = null
             )
@@ -93,11 +95,13 @@ modifier: Modifier = Modifier
                     style = MaterialTheme.typography.displayLarge,
                     modifier = Modifier.padding(top = 8.dp)
                 )
-                Text(
-                    text = stringResource(ad.title),
-                    style = MaterialTheme.typography.displayMedium,
-                    modifier = Modifier.padding(top = 8.dp)
-                )
+                    Text(
+                        text = stringResource(ad.title),
+                        style = MaterialTheme.typography.displayMedium,
+                        modifier = Modifier.padding(top = 8.dp) ,
+                        maxLines = 4, overflow = TextOverflow.Ellipsis
+                    )
+                Divider()
                 Text(
                     text = stringResource(ad.time),
                     style = MaterialTheme.typography.displaySmall,
@@ -134,3 +138,4 @@ fun ClickbaitPreview() {
         ClickbaitApp()
     }
 }
+

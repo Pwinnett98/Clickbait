@@ -21,21 +21,16 @@ val Typography = Typography(
     displayLarge = TextStyle(
         fontFamily = Cabin,
         fontWeight = FontWeight.Bold,
-        fontSize = 36.sp
+        fontSize = 14.sp
     ),
     displayMedium = TextStyle(
         fontFamily = EBGaramond,
         fontWeight = FontWeight.Normal,
-        fontSize = 20.sp
+        fontSize = 16.sp
     ),
-    labelSmall = TextStyle(
+    displaySmall = TextStyle(
         fontFamily = EBGaramond,
         fontWeight = FontWeight.Normal,
-        fontSize = 14.sp
-    ),
-    bodyLarge = TextStyle(
-        fontFamily = EBGaramond,
-        fontWeight = FontWeight.Bold,
-        fontSize = 14.sp
+        fontSize = 12.sp
     )
 )
