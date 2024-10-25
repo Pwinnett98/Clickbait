@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -83,13 +84,12 @@ modifier: Modifier = Modifier
                 .padding(8.dp)
         ) {
             Image(
-                modifier = modifier
-                    .size(width = 150.dp, height = 150.dp)
-                    .padding(0.dp)
-                    .clip(MaterialTheme.shapes.medium),
+                painter = painterResource(id = ad.imageResourceId),
+                contentDescription = null,
+                modifier = Modifier
+                    .height(150.dp)
+                    .fillMaxWidth(),
                 contentScale = ContentScale.Crop,
-                painter = painterResource(ad.imageResourceId),
-                contentDescription = null
             )
                 Text(
                     text = stringResource(ad.creator),
