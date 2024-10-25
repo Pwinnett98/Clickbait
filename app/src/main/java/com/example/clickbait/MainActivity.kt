@@ -87,7 +87,7 @@ modifier: Modifier = Modifier
                     .size(width = 150.dp, height = 150.dp)
                     .padding(0.dp)
                     .clip(MaterialTheme.shapes.medium),
-                contentScale = ContentScale.FillWidth,
+                contentScale = ContentScale.Crop,
                 painter = painterResource(ad.imageResourceId),
                 contentDescription = null
             )
@@ -149,3 +149,19 @@ fun ClickbaitPreview() {
     }
 }
 
+@Preview
+@Composable
+fun SingleCardPreview() {
+    val clickBait = DataSource.Ads[0]
+    ClickbaitTheme {
+        AdItem(clickBait)
+    }
+}
+
+@Preview
+@Composable
+fun ClickbaitDarkThemePreview() {
+    ClickbaitTheme(darkTheme = true) {
+        ClickbaitApp()
+    }
+}
